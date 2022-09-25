@@ -1,0 +1,47 @@
+.inputContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .inputWrapper {
+    position: relative;
+    width: 100%;
+    input {
+      max-width: inherit;
+      width: 100%;
+      overflow: hidden;
+      height: 44px;
+      background: #555;
+      border-radius: 3px;
+      border: solid 1px #151515;
+      color: #fff;
+      font-size: 16px;
+      line-height: 19px;
+      padding-left: 10px;
+      &:focus {
+        border: solid 1px #888;
+        background-color: #6a6a6a;
+        outline: none;
+      }
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:focus {
+      transition: background-color 600000s 0s, color 600000s 0s;
+    }
+    .adornment {
+      position: absolute;
+      right: 10px;
+      top: 15px;
+      font-size: 12px;
+      color: #aaa;
+    }
+  }
+  .inputError {
+    color: red;
+    text-align: center;
+    opacity: 0.8;
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 5px;
+  }
+}

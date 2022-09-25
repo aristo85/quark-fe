@@ -1,0 +1,22 @@
+.loginBtn {
+  width: 312px;
+  height: 40.28px;
+  background: linear-gradient(
+    156.67deg,
+    #00c4f6 -70.76%,
+    #210dc5 34.39%,
+    #1d07d2 114.73%
+  );
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-family: "Roboto";
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
+  cursor: pointer;
+  margin-top: 2rem;
+  &:hover {
+    background: #1d07d2;
+}
+}

@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  background: url(assets/images/bgimage.png) no-repeat center center fixed;
+  background-color: #000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "HelveticaNeue", sans-serif;
+}
+
+p {
+  margin: 0;
+}

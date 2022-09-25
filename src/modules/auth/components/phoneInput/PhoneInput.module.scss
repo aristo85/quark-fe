@@ -1,0 +1,52 @@
+$char-w: 1ch;
+$gap: 0.5 * $char-w;
+
+@function inW($n-char) {
+  @return $n-char * ($char-w + $gap);
+}
+
+@mixin digHolder($n-char) {
+  width: inW($n-char);
+  font: 5ch droid sans mono, consolas, monospace;
+  letter-spacing: $gap;
+  background: repeating-linear-gradient(
+      90deg,
+      #979797 0,
+      #979797 $char-w,
+      transparent 0,
+      transparent $char-w + $gap
+    )
+    0 100% / #{inW($n-char) - $gap} 2px no-repeat;
+  &:after {
+    content: "1";
+    opacity: 0;
+    height: 10px;
+  }
+}
+
+.phoneInput {
+  display: block;
+  border: none;
+  padding: 0;
+  width: inW(12);
+  font: 5ch droid sans mono, consolas, monospace;
+  font-weight: 800;
+  letter-spacing: $gap;
+  &:focus {
+    outline: none;
+    color: dodgerblue;
+  }
+}
+
+.digitHolderContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 2px;
+  .digitHolder {
+    @include digHolder(3);
+  }
+  .largeDigitHolder {
+    @include digHolder(4);
+  }
+}
